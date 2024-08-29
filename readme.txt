@@ -1,4 +1,4 @@
-In this project, I have implemented a policy manager system.
+In this project, I have implemented a Policy Management System.
 In order to interact with the webpage, you'll have to follow the given steps.
 
 1. Type node index.js in the terminal while in the root directory.
