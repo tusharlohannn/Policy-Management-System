@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="mainContainer">
+    <header>
+      <p>Policy Manager 2024</p>
+      <div class="linksDiv">
+        <a class="policyListButton" href="./user.html">Policy List</a>
+        <a class="inventoryButton" href="./userInventory.html">Inventory</a>
+        <div id="logoutContainer">
+          <img id="logoutButton" style="width: 22px;" src="./images/logout.svg">
+          <div id="logoutText">Logout</div>
+        </div>
+      </div>
+    </header>
+    <h1 id="welcomeMessage" style="text-align: center;margin: 2rem auto;">Welcome, User</h1>
+    <p style="font-size: 18px;font-weight: bold;margin: auto 36px;">Given Below are your personalised policies.</p>
+    <table id="policyTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Policy Number</th>
+          <th>Insured Party</th>
+          <th>Coverage Type</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Premium Amount</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Policies will be populated here -->
+      </tbody>
+    </table>
+    <button id="addPolicyButton">Add New Policy</button>
+  </div>
+  
+
+  <div id="addPolicyForm" style="display:none;">
+    <h2>Add a new Policy</h2>
+    <p>Enter the following details in order to add a new policy.</p>
+    <form>
+      <input type="text" id="addPolicy_number" placeholder="Policy Number" required>
+      <input type="text" id="addInsured_party" placeholder="Insured Party" required>
+      <input type="text" id="addCoverage_type" placeholder="Coverage Type" required>
+      <input type="date" id="addStart_date" placeholder="Start Date" required>
+      <input type="date" id="addEnd_date" placeholder="End Date" required>
+      <input type="number" id="addPremium_amount" placeholder="Premium Amount" required>
+      <input type="text" id="addStatus" placeholder="Status" required>
+      <div class="buttonsDiv">
+        <button type="button" id="addCloseButton">Close</button>
+        <button type="button" id="addSaveButton">Add Policy</button>
+      </div>
+    </form>
+  </div>
+
+<div id="editPolicyForm" style="display:none;">
+  <h2>Add a new Policy</h2>
+  <p>Enter the following details in order to add a new policy.</p>
+  <form>
+    <input type="number" id="id" placeholder="ID" readonly>
+    <input type="text" id="policy_number" placeholder="Policy Number">
+    <input type="text" id="insured_party" placeholder="Insured Party">
+    <input type="text" id="coverage_type" placeholder="Coverage Type">
+    <input type="date" id="start_date" placeholder="Start Date">
+    <input type="date" id="end_date" placeholder="End Date">
+    <input type="number" id="premium_amount" placeholder="Premium Amount">
+    <input type="text" id="status" placeholder="Status">
+    <div class="buttonsDiv">
+      <button type="button" id="editCloseButton">Close</button>
+      <button type="submit" id="editSaveButton">Update Policy</button>
+    </div>
+  </form>
+</div>
+
+<div id="deletePolicyForm" style="display: none;">
+  <h2>Delete the selected policy?</h2>
+  <p>Select Delete to confirm.</p>
+  <div class="buttonsDiv">
+    <button type="button" id="deleteCloseButton">Close</button>
+    <button type="submit" id="deleteSaveButton">Delete</button>
+  </div>
+</div>
+
+
+  <script src="./userScript.js"></script>
+</body>
+</html>

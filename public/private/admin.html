@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <p>Policy Manager 2024</p>
+    <div class="linksDiv">
+      <a class="policyListButton" href="./admin.html">Policy List</a>
+      <a class="inventoryButton" href="./adminInventory.html">Inventory</a>
+      <div id="logoutContainer">
+        <img id="logoutButton" style="width: 22px;" src="./images/logout.svg">
+        <div id="logoutText">Logout</div>
+      </div>
+    </div>
+  </header>
+
+  <h1 style="margin: 2rem 0 0 2rem;">List of all available users:</h1>
+  <div id="usersContainer">
+    
+  </div>
+  <button id="addNewUserButton" type="button">Add User</button>
+
+  <div id="addUserForm" style="display:none;">
+    <h2>Add a new User</h2>
+    <p>Enter the following details in order to add a new user.</p>
+    <form>
+      <input type="text" id="addUserId" placeholder="Enter Username" required>
+      <input type="password" id="addUserPassword" placeholder="Enter Password" required>
+      <div class="buttonsDiv">
+        <button type="button" id="addUserCloseButton">Close</button>
+        <button type="button" id="addUserSaveButton">Add User</button>
+      </div>
+    </form>
+  </div>
+
+
+  <div id="editUserForm" style="display:none;">
+    <h2>Edit the current User</h2>
+    <p>You can edit the following details of the user.</p>
+    <form>
+      <input type="number" id="editUserId" readonly>
+      <input type="text" id="editUserUsername" placeholder="Enter Username">
+      <input type="password" id="editUserPassword" placeholder="Enter Password">
+      <div class="buttonsDiv">
+        <button type="button" id="editUserCloseButton">Close</button>
+        <button type="button" id="editUserSaveButton">Update User</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="deleteUserForm" style="display:none;">
+    <h2>Are you sure you want to delete the current user?</h2>
+    <p>Click confirm to delete the user permanently.</p>
+    <div class="buttonsDiv">
+      <button type="button" id="deleteUserCloseButton">Close</button>
+      <button type="button" id="deleteUserSaveButton">Confirm</button>
+    </div>
+  </div>
+
+  <script src="./adminScript.js"></script>
+</body>
+</html>

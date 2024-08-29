@@ -1,0 +1,316 @@
+body {
+  font-family: "Jost", sans-serif;
+  margin: 0;
+  background-color: #EBD3F8;
+}
+
+header{
+  display: flex;
+  background-color: #2E073F;
+  justify-content: space-between;
+  color:#dddddd;
+  margin: 0;
+  padding: 1rem 1rem;
+}
+
+header a, header p{
+  margin: 0;
+  text-decoration: none;
+  color: #dddddd;
+}
+
+.linksDiv{
+  display: flex;
+  width: 240px;
+  justify-content: space-around;
+}
+
+table {
+  width: 96%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+table thead {
+  background-color: #2E073F;
+  color: white;
+}
+
+table thead th {
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+  border: 1px solid #dddddd;
+}
+
+tbody tr{
+  background-color: #AD49E1;
+}
+
+table tbody tr:hover {
+  background-color: #7A1CAC;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+table tbody td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  border: 1px solid #dddddd;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.editButton {
+  background-color: #16C79A; /* Blue */
+  width: 72px;
+  display: flex;
+  gap: 0.2rem;  
+}
+
+.editButton:hover {
+  background-color: #009f77;
+  transition: 0.2s;
+}
+
+.deleteButton {
+  background-color: #f44336; /* Red */
+  width: 92px;
+  display: flex;
+  gap: 0.2rem;
+}
+
+.deleteButton:hover {
+  background-color: #da190b;
+  transition: 0.2s;
+}
+
+#addPolicyButton {
+  margin: 40px auto;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #7A1CAC;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  width: 148px;
+  text-align: center;
+}
+
+#addPolicyButton:hover {
+  background-color: #AD49E1;
+  transition: 0.4s;
+}
+
+.actionButtonsDiv{
+  display: flex;
+  justify-content: space-around;
+}
+
+.actionButtonsDiv img{
+  width: 18px;
+}
+
+#addPolicyForm, #editPolicyForm{
+  width: 600px;
+  margin: 20px auto;
+  padding: 0.2rem 1rem 1rem;
+  background-color: #EEEEEE;
+  border-radius: 1rem;
+  display: none;
+  position: fixed;
+  top: 14%;
+  left: 28%;
+}
+
+#deletePolicyForm, #requestPolicyForm{
+  width: 600px;
+  margin: 20px auto;
+  padding: 0.2rem 1rem 1rem;
+  background-color: #EEEEEE;
+  border-radius: 1rem;
+  display: none;
+  position: fixed;
+  top: 32%;
+  left: 28%;
+  height: 24vh;
+}
+
+#deletePolicyForm p, #requestPolicyForm{
+  margin: 1.6rem auto;
+}
+
+#deletePolicyForm h2, #requestPolicyForm{
+  margin-top: 1rem;
+}
+
+#deletePolicyForm .buttonsDiv, #requestPolicyForm .buttonsDiv{
+  margin-top: 2.2rem;
+}
+
+#editPolicyForm{
+  top: 12%;
+}
+
+#addPolicyForm input, #editPolicyForm input{
+  margin-bottom: 0.6rem;
+  height: 28px;
+  font-size: 14px;
+  border-radius: 0.4rem;
+  border: 1px solid #151515;
+  padding: 0.2rem 0.6rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonsDiv{
+  display: flex;
+  justify-content: end;
+  gap: 0.8rem;
+}
+
+#editSaveButton{
+  background-color: #16C79A;
+}
+
+#editSaveButton:hover{
+  background-color: #009f77;
+  transition: 0.2s;
+}
+
+#requestSaveButton{
+  background-color: #4CAF50;
+}
+
+#requestSaveButton:hover{
+  background-color: #1ead23;
+  transition: 0.2s;
+}
+
+#addSaveButton{
+  background-color: #AD49E1;
+}
+
+#addSaveButton:hover{
+  background-color: #7A1CAC;
+  transition: 0.2s;
+}
+
+#deleteSaveButton{
+  background-color: #da190b;
+}
+
+#deleteSaveButton:hover{
+  background-color: #b60f03;
+  transition: 0.2s;
+}
+
+#addCloseButton, #editCloseButton, #deleteCloseButton, #requestCloseButton{
+  background-color: rgb(128, 124, 124);
+}
+
+#addCloseButton:hover, #editCloseButton:hover, #deleteCloseButton:hover, #requestCloseButton:hover{
+  background-color: rgb(91, 87, 87);
+  transition: 0.2s;
+}
+
+.policyListButton:hover, .inventoryButton:hover, .userListButton:hover{
+  color: #AD49E1;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.blur{
+  filter: blur(5px);
+  pointer-events: none;
+}
+
+
+#logoutContainer {
+  position: relative;
+  display: inline-block;
+}
+
+#logoutButton {
+  cursor: pointer;
+}
+
+#logoutText {
+  visibility: hidden;
+  width: 80px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+#logoutContainer:hover #logoutText {
+  visibility: visible;
+  opacity: 1;
+}
+
+#inventoryTable th{
+  width: 12%;
+}
+
+#pendingRequestsContainer th{
+  width: 24%;
+}
+
+#pendingRequestsContainer tr{
+  padding: 1rem;
+}
+
+.buttonsFlex{
+  display: flex;
+  gap: 2rem;
+}
+
+.buttonsFlex button{
+  margin: auto 1rem;
+}
+
+.acceptButton{
+  background-color: #1ead23;
+}
+
+.rejectButton{
+  background-color: #da190b;
+}
+
+.acceptButton:hover{
+  background-color: #4CAF50;
+  transition: 0.2s;
+}
+
+.rejectButton:hover{
+  background-color: #b60f03;
+  transition: 0.2s;
+}
